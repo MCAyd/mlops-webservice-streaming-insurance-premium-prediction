@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Company</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='def.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to MCA Insurance, Premium Amount Predictor Service</h1>
+    </header>
+    <div class="container">
+        <h2>Are you a new customer or an existing customer?</h2>
+        <form action="{{ url_for('get_newc_info') }}" method="get">
+            <button type="submit">New Customer</button>
+        </form>
+        <form action="{{ url_for('get_existingc_info') }}" method="get">
+            <input type="text" name="customer_id" placeholder="Enter your ID" required>
+            <button type="submit">Existing Customer</button>
+        </form>
+    </div>
+</body>
+</html>

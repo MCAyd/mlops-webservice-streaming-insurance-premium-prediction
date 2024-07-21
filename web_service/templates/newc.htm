@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Existing Customer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='def.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Customer Information</h1>
+    </header>        
+    <div class="container">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.date_birth.label }} 
+                {{ form.date_birth(type="date") }}
+                {% for error in form.date_birth.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.date_licence.label }} 
+                {{ form.date_licence(type="date") }}
+                {% for error in form.date_licence.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.type_risk.label }} {{ form.type_risk() }}
+            </div>
+            <div>
+                {{ form.second_driver.label }} {{ form.second_driver() }}
+            </div>
+            <div>
+                {{ form.area.label }} {{ form.area() }}
+            </div>
+            <div>
+                {{ form.power.label }} {{ form.power() }}
+            </div>
+            <div>
+                {{ form.cylinder_capacity.label }} {{ form.cylinder_capacity() }}
+            </div>
+            <div>
+                {{ form.value_vehicle.label }} {{ form.value_vehicle() }}
+            </div>
+            <div>
+                {{ form.type_fuel.label }} {{ form.type_fuel() }}
+            </div>
+            <div>
+                {{ form.year_matriculation.label }} {{ form.year_matriculation() }}
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+</body>
+</html>

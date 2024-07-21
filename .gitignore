@@ -1,0 +1,5 @@
+api
+lambda_service/__pycache__
+model_service/__pycache__
+web_service/__pycache__
+web_service/aws_settings.json

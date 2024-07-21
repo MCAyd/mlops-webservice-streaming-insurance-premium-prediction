@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Offer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='def.css') }}">
+</head>
+<body>
+    <h1>Your Offer is Ready!</h1>
+    <h2>The Premium Amount According to Form Responses</h2>
+    <div>
+        {% if prediction %}
+            <ul>
+                <li><strong>{{ prediction }} USD</strong></li>
+            </ul>
+        {% else %}
+            <p>No prediction data available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

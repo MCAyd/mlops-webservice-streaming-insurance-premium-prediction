@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Existing Customer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='def.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Customer Information</h1>
+    </header>
+    <div class="container">
+        <h2>Customer Details</h2>
+        <p><strong>ID:</strong> {{ customer_info.ID }}</p>
+        <p><strong>Date of Birth:</strong> {{ customer_info.Date_birth }}</p>
+        <p><strong>Date of Driving Licence:</strong> {{ customer_info.Date_driving_licence }}</p>
+        <p><strong>Average Seniority:</strong> {{ customer_info.av_senior_year }}</p>
+        <p><strong>Claims History:</strong> {{ customer_info.R_Claims_history }}</p>
+        <p><strong>Policy Stability:</strong> {{ customer_info.policy_stability }}</p>
+        <p><strong>Product Stability:</strong> {{ customer_info.product_stability }}</p>
+        <p><strong>Claims per Policy:</strong> {{ customer_info.claims_per_policy }}</p>
+        <p><strong>Cost per Claim:</strong> {{ customer_info.cost_per_claim }}</p>
+        
+    <div class="container">
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <div>
+                    {{ form.type_risk.label }} {{ form.type_risk() }}
+                </div>
+                <div>
+                    {{ form.second_driver.label }} {{ form.second_driver() }}
+                </div>
+                <div>
+                    {{ form.area.label }} {{ form.area() }}
+                </div>
+                <div>
+                    {{ form.power.label }} {{ form.power() }}
+                </div>
+                <div>
+                    {{ form.cylinder_capacity.label }} {{ form.cylinder_capacity() }}
+                </div>
+                <div>
+                    {{ form.value_vehicle.label }} {{ form.value_vehicle() }}
+                </div>
+                <div>
+                    {{ form.type_fuel.label }} {{ form.type_fuel() }}
+                </div>
+                <div>
+                    {{ form.year_matriculation.label }} {{ form.year_matriculation() }}
+                </div>
+                <div>
+                    {{ form.submit() }}
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
