@@ -43,6 +43,10 @@ This project aims to predict motor vehicle insurance premiums using a machine le
         └── premiumoffer.htm
 ```
 
+## Project Diagram
+
+![Alt text](./assets/diagram.png)
+
 ## Create a Key Pair and Security Groups for EC2 instances that host MLflow and Elasticsearch services
 
 In order to SSH EC2 instances, you need to create a key pair RSA type named exactly `ec2_instance`.
@@ -188,7 +192,11 @@ In order to have fully worked application, go to AWS console, create a Lambda fu
 
 While creating Lambda function using Container image, make sure that default execution role has full access to S3, Lambda, and Kinesis services. Don't forget to adjust Lambda Memory Capacity and timeout.
 
+![Alt text](./assets/create_lambda.png)
+
 To attach Kinesis Input Stream, make sure batch size is 1 and activate trigger option is ticked.
+
+![Alt text](./assets/attach_kinesis.png)
 
 Once the initial deployment run completed and lambda function is created with Kinesis Stream Input attachment, go through a new terminal, head into `web_service` and command `make run_local`
 
