@@ -5,7 +5,6 @@ export AWS_ACCESS_KEY_ID="your_access_key_id"
 export AWS_SECRET_ACCESS_KEY="your_secret_access_key"
 export AWS_DEFAULT_REGION="your_region"
 export PREFECT_CLOUD_API_KEY="your_prefect_cloud_api_key"
-export JSON_FILE="your_json_file"
 export BUCKET_NAME="your_bucket_name"
 export DOCKER_REMOTE_URI="your_docker_remote_uri" #for premium-prediction-lambda
 
