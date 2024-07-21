@@ -191,3 +191,14 @@ While creating Lambda function using Container image, make sure that default exe
 To attach Kinesis Input Stream, make sure batch size is 1 and activate trigger option is ticked.
 
 Once the initial deployment run completed and lambda function is created with Kinesis Stream Input attachment, go through a new terminal, head into `web_service` and command `make run_local`
+
+## Optional
+
+Model_service can also be registered to an ECR with the following code after you ensure that the repository `premium-prediction-model` is created.
+
+```bash
+export MODEL_REMOTE_URI="aws_account_id.dkr.ecr.region.amazonaws.com/premium-prediction-model"
+cd model_service
+make push
+```
+If you're familiar with AWS ECS operations, you can create an ECS Linux task to operate model training service.

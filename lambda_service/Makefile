@@ -2,7 +2,7 @@ build:
 	docker build --build-arg BUCKET_NAME=${BUCKET_NAME} -t premium-prediction-lambda:v1 .
 
 push:
-	DOCKER_REMOTE_URI=$(DOCKER_REMOTE_URI) python3 docker_push.py
+	DOCKER_REMOTE_URI=$(LAMBDA_REMOTE_URI) python3 docker_push.py
 
 run_local:
 	docker run -it \
@@ -13,4 +13,4 @@ run_local:
 	premium-prediction-lambda:v1
 
 delete:
-	docker image rm $(DOCKER_REMOTE_URI):v1
+	docker image rm $(LAMBDA_REMOTE_URI):v1

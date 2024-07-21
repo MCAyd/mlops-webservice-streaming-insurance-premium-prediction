@@ -6,7 +6,7 @@ export AWS_SECRET_ACCESS_KEY="your_secret_access_key"
 export AWS_DEFAULT_REGION="your_region"
 export PREFECT_CLOUD_API_KEY="your_prefect_cloud_api_key"
 export BUCKET_NAME="your_bucket_name"
-export DOCKER_REMOTE_URI="your_docker_remote_uri" #for premium-prediction-lambda
+export LAMBDA_REMOTE_URI="aws_account_id.dkr.ecr.region.amazonaws.com/premium-prediction-lambda" #for premium-prediction-lambda
 
 cd lambda_service
 

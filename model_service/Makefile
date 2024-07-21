@@ -1,4 +1,3 @@
-DOCKER_REMOTE_URI := "000000.dkr.ecr.eu-west-2.amazonaws.com/premium-prediction-model"
 JSON_FILE := "config.json"
 
 upload_config:
@@ -16,7 +15,7 @@ run_local:
 	premium-prediction-model:v1
 
 push:
-	DOCKER_REMOTE_URI=$(DOCKER_REMOTE_URI) python3 docker_push.py
+	DOCKER_REMOTE_URI=$(MODEL_REMOTE_URI) python3 docker_push.py
 
 delete:
-	docker image rm $(DOCKER_REMOTE_URI):v1
+	docker image rm $(MODEL_REMOTE_URI):v1
